@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+import { Button } from "@/components/ui/button"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -11,6 +24,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +43,79 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${robotoCondensed.className} antialiased `}
       >
+        <header>
+          <Menubar className="m-0 rounded-none bg-white">
+            <MenubarMenu>
+              <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent md:flex-row md:justify-between">
+                <a href="#inicio" className="bg-transparent">Inicio</a>
+              </MenubarTrigger>
+
+              <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
+                <a href="#Educacion" className="bg-transparent">Educación</a>
+              </MenubarTrigger>
+
+              <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
+                <a href="#Proyectos" className="bg-transparent">Proyectos</a>
+              </MenubarTrigger>
+            </MenubarMenu>
+
+          </Menubar>
+        </header>
         {children}
+        <footer className="mt-2 bg-gradient-to-b from-gray-800 to-gray-900 text-white py-6">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 px-4">
+
+            {/* Redes */}
+            <div className="flex flex-col items-center rounded-2xl p-4 shadow-md">
+              <p className="text-lg font-semibold mb-3">Redes</p>
+              <div className="flex flex-row gap-3 text-3xl text-white items-center justify-center">
+                <a href="https://github.com/javierR26" target="_blank" className="w-7 h-7">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a href="https://linkedin.com/in/edison-cárdenas-a0b05a307" target="_blank" className="w-7 h-7">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+                <a href="mailto:javiecardenas128@gmail.com" target="_blank" className="w-7 h-7">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </a>
+              </div>
+            </div>
+
+
+            {/* Menú */}
+            <div className="flex flex-col justify-center items-center  rounded-2xl shadow-md">
+              <p className="text-lg font-semibold ">Menu</p>
+              <Menubar className="m-0 ">
+                <MenubarMenu>
+                  <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
+                    <a href="#inicio" className="bg-transparent">Inicio</a>
+                  </MenubarTrigger>
+
+                  <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
+                    <a href="#Educacion" className="bg-transparent">Educación</a>
+                  </MenubarTrigger>
+
+                  <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
+                    <a href="#Proyectos" className="bg-transparent">Proyectos</a>
+                  </MenubarTrigger>
+                </MenubarMenu>
+
+              </Menubar>
+            </div>
+
+            {/* Hoja de vida */}
+            <div className="flex flex-col justify-center items-center  rounded-2xl shadow-md">
+              <p className="text-lg font-semibold mb-3">Hoja de vida</p>
+              <Button variant="outline" className="border-white text-black hover:bg-black hover:text-gray-900 transition-all">
+                Descarga CV
+              </Button>
+            </div>
+
+          </div>
+        </footer>
+
       </body>
     </html>
   );
