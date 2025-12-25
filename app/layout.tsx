@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from 'next/link';
 import { Geist, Geist_Mono, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import {
@@ -49,15 +50,15 @@ export default function RootLayout({
           <Menubar className="m-0 rounded-none bg-white">
             <MenubarMenu>
               <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent md:flex-row md:justify-between">
-                <a href="#inicio" className="bg-transparent">Inicio</a>
+                <Link href="#inicio" className="bg-transparent">Inicio</Link>
               </MenubarTrigger>
 
               <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
-                <a href="#Educacion" className="bg-transparent">Educación</a>
+                <Link href="#Educacion" className="bg-transparent">Educación</Link>
               </MenubarTrigger>
 
               <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
-                <a href="#Proyectos" className="bg-transparent">Proyectos</a>
+                <Link href="#Proyectos" className="bg-transparent">Proyectos</Link>
               </MenubarTrigger>
             </MenubarMenu>
 
@@ -71,15 +72,15 @@ export default function RootLayout({
             <div className="flex flex-col items-center rounded-2xl p-4 shadow-md">
               <p className="text-lg font-semibold mb-3">Redes</p>
               <div className="flex flex-row gap-3 text-3xl text-white items-center justify-center">
-                <a href="https://github.com/javierR26" target="_blank" className="w-7 h-7">
+                <Link href="https://github.com/javierR26" target="_blank" className="w-7 h-7">
                   <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://linkedin.com/in/edison-cárdenas-a0b05a307" target="_blank" className="w-7 h-7">
+                </Link>
+                <Link href="https://linkedin.com/in/edison-cárdenas-a0b05a307" target="_blank" className="w-7 h-7">
                   <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-                <a href="mailto:javiecardenas128@gmail.com" target="_blank" className="w-7 h-7">
+                </Link>
+                <Link href="mailto:javiecardenas128@gmail.com" target="_blank" className="w-7 h-7">
                   <FontAwesomeIcon icon={faEnvelope} />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -90,15 +91,15 @@ export default function RootLayout({
               <Menubar className="m-0 ">
                 <MenubarMenu>
                   <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
-                    <a href="#inicio" className="bg-transparent">Inicio</a>
+                    <Link href="#inicio" className="bg-transparent">Inicio</Link>
                   </MenubarTrigger>
 
                   <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
-                    <a href="#Educacion" className="bg-transparent">Educación</a>
+                    <Link href="#Educacion" className="bg-transparent">Educación</Link>
                   </MenubarTrigger>
 
                   <MenubarTrigger className="text-lg text-black bg-transparent focus:bg-transparent data-[state=open]:bg-transparent hover:bg-transparent active:bg-transparent">
-                    <a href="#Proyectos" className="bg-transparent">Proyectos</a>
+                    <Link href="#Proyectos" className="bg-transparent">Proyectos</Link>
                   </MenubarTrigger>
                 </MenubarMenu>
 
@@ -107,10 +108,10 @@ export default function RootLayout({
 
             {/* Hoja de vida */}
             <div className="flex flex-col justify-center items-center  rounded-2xl shadow-md">
-              <p className="text-lg font-semibold mb-3">Hoja de vida</p>
-              <Button variant="outline" className="border-white text-black hover:bg-black hover:text-gray-900 transition-all">
-                Descarga CV
-              </Button>
+              <p className="text-lg font-semibold mb-3">Descargar Hoja de vida</p>
+              <Link href="/doc/hoja_v.pdf" download={"Edison_Cardenas.pdf"} className="bg-white p-2 rounded-2xl border-white text-black hover:bg-gray-200 hover:text-gray-900 transition-all">
+                Descargar
+              </Link>
             </div>
 
           </div>

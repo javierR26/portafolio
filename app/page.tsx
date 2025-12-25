@@ -1,14 +1,4 @@
-import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import SkillCircle from "@/components/ui/SkillCircle";
-import { Button } from "@/components/ui/button"
+import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
@@ -18,10 +8,10 @@ import { ProjectsGrid } from "@/components/Projects/ProjectsGrid";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
-      <div className="container mx-auto max-w-5xl bg-white shadow-md rounded-lg p-6">
+      <div id="inicio" className="container mx-auto max-w-5xl bg-white shadow-md rounded-lg p-6">
         <header className="flex flex-col items-center gap-6">
           <img
-            src="https://img.freepik.com/foto-gratis/joven-hombre-barbudo-camisa-rayas_273609-5677.jpg?semt=ais_hybrid&w=740&q=80"
+            src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=Heather&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
             alt="Foto de Edison Javier Cardenas Roa"
             className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-gray-200"
           />
@@ -31,27 +21,27 @@ export default function Home() {
             <p className="text-sm text-gray-500">Cundinamarca, Colombia</p>
 
             <div className="mt-3 flex flex-wrap justify-center gap-2">
-              <a
-                href="mailto:javiecardenas128@gmail.com"
+              <Link
+                href="/formulario"
                 className=" px-3 py-1 text-sm border rounded hover:bg-gray-50 flex"
               >
                 <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
-              </a>
-              <a href="/cv.pdf" className="px-3 py-1 text-sm border rounded hover:bg-gray-50 flex">
+              </Link>
+              <Link href="/doc/hoja_v.pdf" className="px-3 py-1 text-sm border rounded hover:bg-gray-50 flex">
                 <FontAwesomeIcon icon={faFile} className="w-4 h-4" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://github.com/javierR26"
                 className=" px-3 py-1 text-sm border rounded hover:bg-gray-50 flex"
               >
                 <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://linkedin.com/in/edison-cárdenas-a0b05a307"
                 className=" px-3 py-1 text-sm border rounded hover:bg-gray-50 flex"
               >
                 <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4" />
-              </a>
+              </Link>
 
             </div>
           </div>
@@ -96,7 +86,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div id="Educacion">
               <h2 className="text-lg font-medium mb-2">Formación</h2>
               <div className="bg-gray-50 p-3 rounded mb-2">
                 <h3 className="font-semibold">Técnico</h3>

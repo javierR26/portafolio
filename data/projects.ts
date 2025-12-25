@@ -2,10 +2,10 @@ export const projects = [
         {
         id: 1,
         title: "Venta de artesanias",
-        img:"",
+        img:"/img/Manart.jpeg",
         description: "e-comercer de venta de artesanias",
         technologies: ["Next.js", "Spring Boot","Spring Boot Security", "MySQL", "Tailwind CSS"],
-        gitHub: "",
+        gitHub: "https://github.com/episteme-debug/project-manart-backend",
         demo: ""
     },
     {
@@ -14,8 +14,8 @@ export const projects = [
         img:"/img/to_do.png",
         description: "Es un Crud de tareas simple",
         technologies: ["Html", "JavaScript", "CSS", "Bootstrap"],
-        gitHub: "",
-        demo: ""
+        gitHub: "https://github.com/javierR26/to-do",
+        demo: "https://luminous-valkyrie-0fa8cc.netlify.app/"
     },
         {
         id: 3,
@@ -32,7 +32,7 @@ export const projects = [
         img:"/img/Clima.png",
         description: "Aplicación que muestra el clima actual usando una API",
         technologies: ["Html", "JavaScript", "CSS", "Bootstrap"],
-        gitHub: "",
-        demo: ""
+        gitHub: "https://github.com/javierR26/Clima",
+        demo: "https://thunderous-strudel-426bf8.netlify.app/"
     },
 ];
