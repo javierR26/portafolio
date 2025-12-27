@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/menubar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 import { Button } from "@/components/ui/button"
 const geistSans = Geist({
@@ -78,8 +78,8 @@ export default function RootLayout({
                 <Link href="https://linkedin.com/in/edison-cárdenas-a0b05a307" target="_blank" className="w-7 h-7">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </Link>
-                <Link href="mailto:javiecardenas128@gmail.com" target="_blank" className="w-7 h-7">
-                  <FontAwesomeIcon icon={faEnvelope} />
+                <Link href="/formulario" target="_blank" className="w-7 h-7">
+                  <FontAwesomeIcon icon={faPaperPlane} />
                 </Link>
               </div>
             </div>
