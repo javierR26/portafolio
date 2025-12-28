@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function Formulario() {
     return (
         <main className="flex justify-center items-center h-screen bg-white text-gray-800">
-            <div id="inicio" className="container mx-auto w-150 bg-white shadow-md rounded-lg p-6 border-1 border-black-500">
-                <div className='w-15'>
+            <div id="inicio" className="mx-auto w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 bg-white shadow-md rounded-lg p-6"
+            >  <div className='w-15'>
                     <Link
                         href="/"
                         className=" px-3 py-1 text-sm border rounded hover:bg-gray-50 flex"
