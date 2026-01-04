@@ -107,12 +107,12 @@ export default function RootLayout({
             </div>
 
             {/* Hoja de vida */}
-            <div className="flex flex-col justify-center items-center  rounded-2xl shadow-md">
+{/*             <div className="flex flex-col justify-center items-center  rounded-2xl shadow-md">
               <p className="text-lg font-semibold mb-3">Descargar Hoja de vida</p>
               <Link href="/doc/hoja_v.pdf" download={"Edison_Cardenas.pdf"} className="bg-white p-2 rounded-2xl border-white text-black hover:bg-gray-200 hover:text-gray-900 transition-all">
                 Descargar
               </Link>
-            </div>
+            </div> */}
 
           </div>
         </footer>

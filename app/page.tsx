@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { ProjectsGrid } from "@/components/Projects/ProjectsGrid";
-
+import { CarouselDemo } from '@/components/diplomas'
 
 export default function Home() {
   return (
@@ -26,9 +26,6 @@ export default function Home() {
                 className=" px-3 py-1 text-sm border rounded hover:bg-gray-50 flex"
               >
                 <FontAwesomeIcon icon={faPaperPlane} className="w-4 h-4" />
-              </Link>
-              <Link href="/doc/hoja_v.pdf" className="px-3 py-1 text-sm border rounded hover:bg-gray-50 flex">
-                <FontAwesomeIcon icon={faFile} className="w-4 h-4" />
               </Link>
               <Link
                 href="https://github.com/javierR26"
@@ -110,7 +107,6 @@ export default function Home() {
                 <p className="text-sm text-gray-600">SENA — Desarrollo de software</p>
               </div>
             </div>
-
             <div>
               <h2 className="text-lg font-medium mb-2">Extra</h2>
               <p className="text-sm">
@@ -118,6 +114,10 @@ export default function Home() {
                 de lógica, diseño y mecánicas de juego.
 
               </p>
+            </div>
+            <div className='flex flex-col justify-center'>
+              <h2 className="text-lg font-medium mb-2">Diplomas</h2>
+              <CarouselDemo />
             </div>
           </aside>
         </section>
