@@ -42,6 +42,6 @@ export const projects = [
         description: "Aplicación de una galeria y permite agregar a favoritos usando una API",
         technologies: ["Next.js", "React", "JavaScript / TypeScript", "Node.js", "Fetch API", "Tailwind"],
         gitHub: "https://github.com/javierR26/Galeria",
-        demo: ""
+        demo: "https://galeria-nx9t.vercel.app/"
     },
 ];
